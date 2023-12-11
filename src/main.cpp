@@ -19,12 +19,14 @@ int main() {
     if (pidLower == 0) {
         dup2FD(mmapFileDescriptor, STDIN_FILENO);
         execute(CHILD_NAME_LOWER, semaphoreNameList[0], semaphoreNameList[1]);
+        exit(-1);
     }
 
     pid_t pidReplace = createProcess();
     if (pidReplace == 0) {
         dup2FD(mmapFileDescriptor, STDIN_FILENO);
         execute(CHILD_NAME_REPLACE, semaphoreNameList[1], semaphoreNameList[2]);
+        exit(-1);
     }
 
     char userInput[MAX_BUFFER_SIZE];
@@ -54,7 +56,6 @@ int main() {
         printf("%s\n", result_buffer);
     }
 
-    munmap(mp, inputLength);
     unlink(SHARED_MEMORY_FILENAME);
 
     killProcess(pidLower);

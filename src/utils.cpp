@@ -73,8 +73,8 @@ int openSharedMemoryFile(std::string shmFileName) {
     return shmFileDescriptor;
 }
 
-char *mmapCreate(size_t len, int shmFileDescriptor) {
-    char *mp = (char *) mmap(NULL, len, PROT_READ | PROT_WRITE, MAP_SHARED, shmFileDescriptor, 0);
+char* mmapCreate(size_t len, int shmFileDescriptor) {
+    char* mp = reinterpret_cast<char*>(mmap(NULL, len, 0666, MAP_SHARED, shmFileDescriptor, 0));
     if (mp == MAP_FAILED) {
         std::cerr << "Error using mmap for " << shmFileDescriptor << std::endl;
         exit(-1);
@@ -85,7 +85,7 @@ char *mmapCreate(size_t len, int shmFileDescriptor) {
 int openFile(const char *str) {
     int file = open(str, O_CREAT | O_WRONLY | O_TRUNC, 0644);
     if (file == -1) {
-        std::cerr << "Error: failed openin file with name - " << str << std::endl;
+        std::cerr << "Error: failed to open file " << str << std::endl;
         exit(-1);
     }
     return file;

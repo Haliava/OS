@@ -3,7 +3,7 @@
 #include "../include/utils.h"
 
 std::string replace_spaces(std::string source, char replacement) {
-    for (auto spaceChar: {' ', '\t', '\n', '\r', '\t', '\v'})
+    for (auto spaceChar: {' ', '\t', '\r', '\t', '\v'})
         std::replace(source.begin(), source.end(), spaceChar, replacement);
 
     return source;
