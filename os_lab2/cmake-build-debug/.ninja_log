@@ -1,0 +1,4 @@
+# ninja log v5
+8	783	7226060854574079	build.ninja	9edc96639d4e6d6a
+5	1821	7223886948693355	CMakeFiles/os_lab2.dir/src/main.cpp.obj	9a28eddc5cd73443
+1821	1974	7223886950185710	os_lab2.exe	2ded0f2116dff9b0

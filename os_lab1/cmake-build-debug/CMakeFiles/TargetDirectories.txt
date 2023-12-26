@@ -1,0 +1,3 @@
+C:/Users/La Cretura/Desktop/PRJ/MAI/course 2/os/os_lab1/cmake-build-debug/CMakeFiles/oc_lab1.dir
+C:/Users/La Cretura/Desktop/PRJ/MAI/course 2/os/os_lab1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/La Cretura/Desktop/PRJ/MAI/course 2/os/os_lab1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

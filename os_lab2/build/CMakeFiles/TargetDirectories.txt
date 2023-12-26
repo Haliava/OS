@@ -1,0 +1,3 @@
+/mnt/c/Users/La Cretura/Desktop/os_lab2/build/CMakeFiles/os_lab2_exe.dir
+/mnt/c/Users/La Cretura/Desktop/os_lab2/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/La Cretura/Desktop/os_lab2/build/CMakeFiles/rebuild_cache.dir
